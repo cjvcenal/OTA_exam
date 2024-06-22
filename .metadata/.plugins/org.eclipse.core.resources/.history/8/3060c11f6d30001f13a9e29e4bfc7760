@@ -1,0 +1,3 @@
+2024-06-22 15:57:22.310862+08:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "NOTES" not found; SQL statement:
+DROP TABLE NOTES [42102-224]

@@ -1,0 +1,33 @@
+package com.ota.springboot.coding.exam.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ota.springboot.coding.exam.entity.NotesEntity;
+import com.ota.springboot.coding.exam.services.NotesService;
+
+@RestController
+@RequestMapping("/api")
+public class NoteTakingController {
+	
+	
+	@Autowired
+	NotesService notesService;
+	
+	@GetMapping("/notes")
+	public  ResponseEntity<?> fetchNotesList(){
+			return new ResponseEntity<ArrayList<NotesEntity>>(this.notesService.findAllNotes(), HttpStatus.OK);	
+	}
+
+	@GetMapping("/notes/{noteId}")
+	public  ResponseEntity<?> fetchNotesById(@PathVariable int id){
+			return new ResponseEntity<NotesEntity>(this.notesService.findbyId(id), HttpStatus.OK);	
+	}
+}

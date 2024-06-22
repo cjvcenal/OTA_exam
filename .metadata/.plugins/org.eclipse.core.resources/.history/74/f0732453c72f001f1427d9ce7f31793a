@@ -1,0 +1,4 @@
+INSERT INTO NOTES (subjects, title, note) VALUES
+  ('SCI', 'Physics', 'msd@cricket.com'),
+  ('ENG', 'Language', 'rahul.dravid@cricket.com'),
+  ('MAT', 'Algebra', 'virat.kohli@cricket.com');

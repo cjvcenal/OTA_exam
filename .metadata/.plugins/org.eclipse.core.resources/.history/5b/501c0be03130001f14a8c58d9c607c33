@@ -1,0 +1,7 @@
+package com.ota.springboot.coding.exam.dao;
+
+public interface NotesDAO {
+	
+	public void saveNotes(Notes notes);
+
+}

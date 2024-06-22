@@ -1,0 +1,5 @@
+package com.ota.springboot.coding.exam.excep;
+
+public class NotesException extends RuntimeException {
+
+}

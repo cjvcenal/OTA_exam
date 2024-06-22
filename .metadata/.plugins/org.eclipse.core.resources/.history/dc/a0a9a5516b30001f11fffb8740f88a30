@@ -1,0 +1,4 @@
+--INSERT INTO NOTES (subjects, title, note) VALUES
+--('SCI', 'Physics', 'The branch of science concerned with the nature and properties of matter and energy. The subject matter of physics, distinguished from that of chemistry and biology, includes mechanics, heat, light and other radiation, sound, electricity, magnetism, and the structure of atoms.'),
+--('ENG', 'Language', 'the principal method of human communication, consisting of words used in a structured and conventional way and conveyed by speech, writing, or gesture'),
+-- ('MAT', 'Algebra', 'Algebra is a branch of mathematics that uses mathematical statements to describe relationships between things that vary. These variables include things like the relationship between the supply of an object and its price.');

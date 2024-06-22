@@ -1,0 +1,21 @@
+package com.ota.springboot.coding.exam.services.impl;
+
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Service;
+
+import com.ota.springboot.coding.exam.entity.NotesEntity;
+import com.ota.springboot.coding.exam.services.NotesService;
+
+
+
+@Service
+public class NotesServiceImpl implements NotesService{
+
+	@Override
+	public ArrayList<NotesEntity> findAllNotes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

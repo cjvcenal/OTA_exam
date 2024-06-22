@@ -1,0 +1,5 @@
+package com.ota.springboot.coding.exam.entity;
+
+public class ErrorResponse {
+
+}

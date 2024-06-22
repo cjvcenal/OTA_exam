@@ -1,0 +1,18 @@
+package com.ota.springboot.coding.exam.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.ota.springboot.coding.exam.entity.NotesEntity;
+
+
+
+@Repository
+public class NotesDAOImpl implements NotesDAO{
+
+	@Override
+	public void saveNotes(NotesEntity notesEntity) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

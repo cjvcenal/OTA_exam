@@ -1,0 +1,5 @@
+package com.ota.springboot.coding.exam.jparepository;
+
+public interface NotesJpaRepository {
+
+}

@@ -1,0 +1,6 @@
+2024-06-22 09:19:09.234047+08:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT" not found; SQL statement:
+select ne1_0.id,ne1_0.note,ne1_0.subjects,ne1_0.title from student ne1_0 [42102-224]
+2024-06-22 09:19:33.243653+08:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT" not found; SQL statement:
+select ne1_0.id,ne1_0.note,ne1_0.subjects,ne1_0.title from student ne1_0 [42102-224]

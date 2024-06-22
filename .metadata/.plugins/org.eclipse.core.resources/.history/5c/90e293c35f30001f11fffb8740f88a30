@@ -1,0 +1,76 @@
+package com.ota.springboot.coding.exam.services.impl;
+
+import java.util.ArrayList;
+import java.util.Objects;
+import java.util.Optional;
+
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ota.springboot.coding.exam.entity.NotesEntity;
+import com.ota.springboot.coding.exam.excep.NotesErrorException;
+import com.ota.springboot.coding.exam.jparepository.NotesJpaRepository;
+import com.ota.springboot.coding.exam.services.NotesService;
+
+
+
+@Service
+public class NotesServiceImpl implements NotesService{
+	
+	@Autowired
+	NotesJpaRepository notesJpaRepository;
+	
+	
+	@Override
+	public ArrayList<NotesEntity> findAllNotes() {
+		
+		return (ArrayList<NotesEntity>) this.notesJpaRepository.findAll();
+	}
+
+
+	@Override
+	public NotesEntity findbyId(int id) {
+		
+		Optional<NotesEntity> notesEntityOpt = notesJpaRepository.findById(id);
+		if (notesEntityOpt.isPresent()) {
+			return notesEntityOpt.get();
+		} else {
+			
+		    throw new NotesErrorException("Note id not found - " + id);
+		        
+		}
+	}
+
+
+	@Override
+	@Transactional
+	public void saveNotes(NotesEntity notesEntity) {
+		
+		if(Objects.nonNull(notesEntity)) {
+			
+			if(
+				StringUtils.isNotEmpty(notesEntity.getSubjects()) &&
+				StringUtils.isNotEmpty(notesEntity.getTitle()) &&
+				StringUtils.isNotEmpty(notesEntity.getNote())) {
+				
+				this.notesJpaRepository.save(notesEntity);
+			}else {
+				//bad request
+			}
+		}else {
+			//bad request
+		}
+		
+		
+	}
+
+
+	@Override
+	@Transactional
+	public void deleteNotesbyId(int id) {
+		this.notesJpaRepository.deleteById(id);
+	}
+
+}

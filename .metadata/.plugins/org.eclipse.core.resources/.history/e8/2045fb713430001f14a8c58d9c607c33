@@ -1,0 +1,5 @@
+package com.ota.springboot.coding.exam.services.impl;
+
+public interface NotesService {
+
+}
